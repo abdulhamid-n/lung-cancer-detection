@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">O'pka AI logo</title>
+  <desc id="desc">A clinical editorial mark combining stylized lungs, a scan frame, and a small AI node.</desc>
+  <rect width="128" height="128" rx="28" fill="#fffdf8"/>
+  <rect x="8" y="8" width="112" height="112" rx="24" fill="#f4f1ea" stroke="#e4dfd3" stroke-width="2"/>
+  <path d="M64 30v47" fill="none" stroke="#0a4f43" stroke-width="5" stroke-linecap="round"/>
+  <path d="M64 47c-9-15-24-20-33-11-8 8-7 24-3 36 4 14 12 22 23 20 9-2 12-10 12-23V47Z" fill="#e4efe9" stroke="#0c6b5b" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M64 47c9-15 24-20 33-11 8 8 7 24 3 36-4 14-12 22-23 20-9-2-12-10-12-23V47Z" fill="#e4efe9" stroke="#0c6b5b" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M43 51c6 4 10 10 12 18M85 51c-6 4-10 10-12 18" fill="none" stroke="#8b8e96" stroke-width="3" stroke-linecap="round" opacity=".75"/>
+  <path d="M31 29h13M29 31v13M84 29h13M99 31v13M31 99h13M29 84v13M84 99h13M99 84v13" fill="none" stroke="#191b1f" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  <circle cx="92" cy="83" r="8" fill="#fffdf8" stroke="#c2422a" stroke-width="4"/>
+  <path d="M84 83H73" fill="none" stroke="#c2422a" stroke-width="3" stroke-linecap="round"/>
+</svg>

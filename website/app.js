@@ -1,5 +1,5 @@
 /* ============================================================
-   PULMONET — front-end logic
+   O'pka AI — front-end logic
    1. scroll reveals   2. render metrics   3. in-browser ONNX demo
    ============================================================ */
 "use strict";

@@ -1,5 +1,5 @@
 /* ============================================================
-   PULMONET — light editorial-clinical
+   O'pka AI — light editorial-clinical
    Fraunces (display serif) · Hanken Grotesk (body) · IBM Plex Mono (labels)
    ============================================================ */
 :root{
@@ -38,7 +38,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.018em;line-he
 .nav{position:sticky;top:0;z-index:60;display:flex;align-items:center;justify-content:space-between;
   padding:15px clamp(20px,5vw,48px);background:rgba(244,241,234,.82);backdrop-filter:blur(12px);
   border-bottom:1px solid var(--line)}
-.nav__brand{display:flex;align-items:baseline;gap:9px}
+.nav__brand{display:flex;align-items:center;gap:10px}
+.nav__logo{width:34px;height:34px;border-radius:9px;box-shadow:0 6px 16px -12px rgba(25,27,31,.45)}
 .nav__dot{width:10px;height:10px;border-radius:50%;background:var(--accent);align-self:center;flex:0 0 auto}
 .nav__word{font-family:var(--serif);font-weight:600;font-size:1.32rem;letter-spacing:-.01em}
 .nav__sub{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;color:var(--faint)}
