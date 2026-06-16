@@ -23,6 +23,24 @@ document.querySelectorAll(".reveal").forEach(el => io.observe(el));
 // hero is above the fold — reveal immediately
 requestAnimationFrame(() => document.querySelectorAll(".hero .reveal").forEach(el => el.classList.add("is-visible")));
 
+const navLinks = Array.from(document.querySelectorAll(".nav__links a[href^='#']"));
+const navById = new Map(navLinks.map(a => [a.getAttribute("href").slice(1), a]));
+const activeSections = ["dataset", "method", "results", "authors", "demo"]
+  .map(id => document.getElementById(id))
+  .filter(Boolean);
+
+function setActiveNav(id) {
+  navLinks.forEach(a => a.classList.toggle("is-active", a === navById.get(id)));
+}
+
+const navIo = new IntersectionObserver((entries) => {
+  const visible = entries
+    .filter(e => e.isIntersecting)
+    .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+  if (visible) setActiveNav(visible.target.id);
+}, { rootMargin: "-28% 0px -58% 0px", threshold: [0.08, 0.2, 0.45] });
+activeSections.forEach(section => navIo.observe(section));
+
 /* ---------- 2. render metrics ---------- */
 function pct(x) { return Math.round(x * 100); }
 
@@ -248,7 +266,7 @@ async function analyse() {
     const logits = Array.from(res[Object.keys(res)[0]].data);
     const probs = softmax(logits);
     renderVerdict(probs);
-    setStatus("Done. Educational result — not a diagnosis.", "ok");
+    setStatus("Done.", "ok");
   } catch (e) {
     console.error(e); setStatus("Inference failed: " + e.message, "err");
   } finally {

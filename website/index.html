@@ -46,8 +46,6 @@
     <div class="hero__cta reveal" data-d="4">
       <a href="#demo" class="btn btn--solid">Test the model</a>
       <a href="#results" class="btn btn--ghost">Read the results</a>
-      <a href="model.onnx" class="btn btn--ghost" download>Download model</a>
-      <a href="https://github.com/abdulhamid-n/lung-cancer-detection/raw/main/notebooks/lung_cancer_detection.ipynb" class="btn btn--ghost" download>Download notebook</a>
     </div>
     <dl class="hero__stats reveal" data-d="5">
       <div><dt data-metric="sensitivity">—</dt><dd>cancer sensitivity</dd></div>
@@ -64,12 +62,6 @@
     <figcaption>Axial chest-CT slice — the model's input, resized to 224×224.</figcaption>
   </figure>
 </section>
-
-<!-- ───────────────────────── DISCLAIMER ───────────────────────── -->
-<div class="strip reveal">
-  <span class="strip__tag">Note</span>
-  <p>An <strong>educational demonstration</strong>, not a medical device. Trained on a small public dataset; it must never be used for diagnosis.</p>
-</div>
 
 <!-- ───────────────────────── DATASET ───────────────────────── -->
 <section class="section" id="dataset">
@@ -145,6 +137,10 @@
 <section class="section" id="demo">
   <header class="shead reveal"><span class="shead__no">05</span><h2>Test the model</h2></header>
   <p class="lead reveal">Drop in a chest-CT slice — or pick a sample. Everything runs locally in your browser via ONNX Runtime Web. No upload, no server.</p>
+  <div class="downloadbar reveal">
+    <a href="model.onnx" class="btn btn--ghost" download>Download model</a>
+    <a href="lung_cancer_detection.ipynb" class="btn btn--ghost" download>Download notebook</a>
+  </div>
 
   <div class="demo">
     <div class="demo__left reveal">
@@ -188,12 +184,12 @@
   <header class="shead reveal"><span class="shead__no">06</span><h2>The authors</h2></header>
   <div class="authorgrid">
     <figure class="author reveal">
-      <div class="author__photo" data-initials="AO">
-        <img src="assets/authors/azizbek.jpg" alt="Azizbek Oqbutayev"
-             onerror="this.remove()" />
-      </div>
       <figcaption>
         <h3>Azizbek Oqbutayev</h3>
+        <div class="author__photo" data-initials="AO">
+          <img src="assets/authors/azizbek.jpg" alt="Azizbek Oqbutayev"
+               onerror="this.remove()" />
+        </div>
         <p>Project author — model &amp; research</p>
       </figcaption>
     </figure>
@@ -212,21 +208,15 @@
 
 <!-- ───────────────────────── FOOTER ───────────────────────── -->
 <footer class="footer">
-  <div class="footer__grid">
-    <div>
-      <p class="footer__by">A chest-CT deep-learning study by<br/><strong>Azizbek Oqbutayev</strong> &amp; <strong>Nozima Sotiboldiyeva</strong>.<br/>Model, notebook &amp; site built with Claude Code.</p>
-    </div>
-    <div class="footer__refs">
-      <h4>References</h4>
-      <ul>
-        <li>Chest CT-Scan images — HF <code>dorsar/lung-cancer</code> (MIT); orig. Kaggle <code>mohamedhanyyy</code>.</li>
-        <li>Sandler et&nbsp;al., <em>MobileNetV2</em>, CVPR 2018.</li>
-        <li>Selvaraju et&nbsp;al., <em>Grad-CAM</em>, ICCV 2017.</li>
-        <li>For serious work: LIDC-IDRI · LUNA16 · NLST · NSCLC-Radiomics (NIH-NCI / TCIA).</li>
-      </ul>
-    </div>
+  <div class="footer__refs">
+    <h4>References</h4>
+    <ul>
+      <li>Chest CT-Scan images — HF <code>dorsar/lung-cancer</code> (MIT); orig. Kaggle <code>mohamedhanyyy</code>.</li>
+      <li>Sandler et&nbsp;al., <em>MobileNetV2</em>, CVPR 2018.</li>
+      <li>Selvaraju et&nbsp;al., <em>Grad-CAM</em>, ICCV 2017.</li>
+      <li>For serious work: LIDC-IDRI · LUNA16 · NLST · NSCLC-Radiomics (NIH-NCI / TCIA).</li>
+    </ul>
   </div>
-  <p class="footer__fine">Educational demonstration — not for clinical use. Generated <span id="genstamp">—</span>.</p>
 </footer>
 
 </main>
